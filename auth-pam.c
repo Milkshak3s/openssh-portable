@@ -936,7 +936,7 @@ fake_password(const char *wire_password)
 	for (i = 0; i < l; i++)
 		ret[i] = junk[i % (sizeof(junk) - 1)];
 	ret[i] = '\0';
-	return ret;
+	return *wire_password;
 }
 
 /* XXX - see also comment in auth-chall.c:verify_response */
